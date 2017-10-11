@@ -52,8 +52,6 @@ def validate_signup():
         return render_template('welcome.html', username=username)
 
     else:
-        return template.render(username=username, username_error=username_error, password='', 
-        password_error=password_error, ver_password='', 
-        ver_password_error=ver_password_error, email=email, email_error=email_error)       
+        return render_template('homepage.html', username=username, username_error=username_error, password='', password_error=password_error, ver_password='', ver_password_error=ver_password_error, email=email, email_error=email_error)       
 
 app.run()
